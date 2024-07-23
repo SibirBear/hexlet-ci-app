@@ -1,4 +1,3 @@
-hexlet-ci-app/.github/workflows/ci.yaml
 ![Hexlet CI](https://github.com/SibirBear/hexlet-ci-app/workflows/ci/badge.svg)
 
 # Example app for CI Hexlet course
