@@ -1,0 +1,24 @@
+name: ci
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        - name: Setup project
+          uses: actions/setup-node@v3
+    
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+        - name: Setup npm
+          run: npm install
+        - name: run lint
+          run: npm run lint
+        - name: run tests
+          run: npm test
+    
